@@ -16,12 +16,22 @@ Including another URLconf
 """
 from django.urls import path
 from ninja import NinjaAPI
+from django.shortcuts import redirect
+
+
 
 
 api = NinjaAPI()
 
 api.add_router("/patio/", "routes.patio.api.router")
 
+
+
+def redirect_to_docs(request):
+    response = redirect('parqueio/docs')
+    return response
+
 urlpatterns = [
+    path("", redirect_to_docs),
     path("parqueio/", api.urls)
 ]

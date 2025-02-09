@@ -9,7 +9,7 @@ from .models import Patio
 
 router = Router()
 
-@router.get("/", response=List[PatioOut])
+@router.get("", response=List[PatioOut])
 def listar_patios(request):
     qs = Patio.objects.all
     return qs
@@ -19,7 +19,7 @@ def buscar_patio(request, patio_id:int):
     patio = get_object_or_404(Patio, id=patio_id)
     return patio
 
-@router.post("/")
+@router.post("")
 def novo_patio(request, payload: PatioIn):
     patio = Patio.objects.create(**payload.dict())
     patio.save()

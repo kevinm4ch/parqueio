@@ -23,7 +23,7 @@ from django.shortcuts import redirect
 
 api = NinjaAPI()
 
-api.add_router("/patio/", "routes.patio.api.router")
+api.add_router("/patio", "routes.patio.api.router")
 
 
 

@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-t9^#a^8*&%y!4r6qu#_zd9ymmfm35%qt92grb+ycy+z=%3w515
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+APPEND_SLASH = False
+
 ALLOWED_HOSTS = []
 
 
@@ -32,13 +34,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 'django.contrib.admin',
-    # 'django.contrib.auth',
-    # 'django.contrib.contenttypes',
+     'django.contrib.auth',
+     'django.contrib.contenttypes',
     # 'django.contrib.sessions',
     # 'django.contrib.messages',
     # 'django.contrib.staticfiles',
-    'routes.patio',
-    'routes.ticket'
+    'routes'
 ]
 
 MIDDLEWARE = [

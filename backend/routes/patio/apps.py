@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class PatioConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'patio'
+    name = 'routes.patio'

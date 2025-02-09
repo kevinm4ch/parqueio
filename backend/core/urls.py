@@ -20,7 +20,7 @@ from ninja import NinjaAPI
 
 api = NinjaAPI()
 
-api.add_router("/patio/", "patio.api.router")
+api.add_router("/patio/", "routes.patio.api.router")
 
 urlpatterns = [
     path("parqueio/", api.urls)
